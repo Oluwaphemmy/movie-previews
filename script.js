@@ -57,7 +57,7 @@ fetch("https://movies-app1.p.rapidapi.com/api/movies", optionss)
             <p class="text-white text-center font-medium text-lg">${img.year}</p>
           </div>`;
     });
-    console.log(list1);
+    //console.log(list1);
     document.getElementById("eben").innerHTML = list1;
   })
   .catch((err) => console.error(err));
@@ -76,8 +76,6 @@ fetch("https://netflix-weekly-top-10.p.rapidapi.com/api/othermovie", opt)
     return response.json();
   })
   .then((eng) => {
-    console.log(eng);
-
     let non = "";
     eng.map((movie) => {
       non += `   <div class="border-2 rounded w-fit bg-red-400 m-5 p-3">
@@ -87,7 +85,21 @@ fetch("https://netflix-weekly-top-10.p.rapidapi.com/api/othermovie", opt)
           <p class="text-white text-center font-bold text-2xl">Rank: ${movie.list}</p>
         </div>`;
     });
-    console.log(non);
+    //console.log(non);
     document.getElementById("che").innerHTML = non;
   })
+  .catch((err) => console.error(err));
+
+//new
+const optionsn = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": "1d61da49demsh189a2f2e1406646p1632e4jsn41aaddf43b21",
+    "X-RapidAPI-Host": "anime-db.p.rapidapi.com",
+  },
+};
+
+fetch("https://anime-db.p.rapidapi.com/genre", optionsn)
+  .then((response) => response.json())
+  .then((response) => console.log(response))
   .catch((err) => console.error(err));

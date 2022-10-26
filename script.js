@@ -229,7 +229,7 @@ function showMovies(movies) {
   src = '${IMGPATH + poster_path}' alt="" />
             </a>
             
-            <p class="text-white w-96 text-center mb-5 font-bold text-2xl">${title}</p>
+            <p class="text-black w-96 text-center mb-5 font-bold text-2xl">${title}</p>
             </div>
            
         `;

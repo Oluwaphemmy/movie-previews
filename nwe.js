@@ -25,14 +25,14 @@ function showMovies(movies) {
     const { poster_path, title, vote_average, overview } = mov;
 
     eben.innerHTML += `
-    <div class ="item-center">
+    <div class ="rounded border-2">
            <a href="">
-             <img   class="md:w-96 w-64 space-x-10 m-10"      
+             <img   class="w-96 space-x-10 m-10"      
        
   src = '${IMGPATH + poster_path}' alt="" />
             </a>
             
-            <p class="text-black w-96 text-center mb-5 font-bold md:text-2xl text-lg">${title}</p>
+            <p class="text-black w-96 text-center mb-5 font-bold text-2xl">${title}</p>
             </div>
            
         `;

@@ -33,6 +33,7 @@ function showMovies(movies) {
             </a>
             
             <p class="text-black w-96 text-center mb-5 font-bold md:text-2xl text-lg">${title}</p>
+            <p class="text-black w-96 text-center mb-5 font-bold md:text-lg text-xs">${overview}</p>
             </div>
            
         `;
@@ -47,14 +48,18 @@ form.addEventListener("submit", (e) => {
   const searchTerm = search.value;
   if (searchTerm) {
     getMovies(SEARCHAPI + searchTerm);
-    eben.innerHTML = `<div class ="rounded border-2">
+    eben.innerHTML = `/*<div class ="rounded border-2">
              <img   src = '${searchTerm.poster_path}' alt="" />
             
             
             <p class="text-white text-center ml-5 font-medium text-lg">${searchTerm.title}
             
             </p>
-            </div>`;
+            </div>
+            
+            
+          <div class ="item-center">*/
+          `;
 
     search.value = "";
   }
